@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/*************************************bordet bottom animated h3***************************** */
+
+
+
+
+  h3 { 
+    display:inline-block;
+    margin:0; 
+   }
+  h3:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px #a2a2a3;  
+    transform: scaleX(0);  
+    transition: transform 400ms ease-in-out;
+  }
+  h3:hover:after {
+   transform: scaleX(1);
+  }
+  
+  
+
+
+
+
+
+/***********************************scroll style**************************************** */
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.scrollStyle::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.scrollStyle::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px #f3f3f3c2;
+            box-shadow: inset 0 0 5px #f3f3f3c2; 
+    border-radius: 6px;
+    background-color: #d3d0d0c2;
+}
+
+/* Handle */
+.scrollStyle::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px #666666c2;
+    background-color: #666666c2;   
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+.scrollStyle::-webkit-scrollbar-thumb:hover {
+   -webkit-box-shadow: inset 0 0 6px #666666c2;
+   background-color: #666666c2;    
+}
+
+
+
+/**************************************animated transiton************************************* */
+
+
+/* we will explain what these classes do next! */
+.v-enter-active{
+  transition: opacity 0.5s ease-in;
+}
+.v-leave-active {
+transition: opacity 0.1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+opacity: 0;
+}
+
+
+
+
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.slide-fade-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
